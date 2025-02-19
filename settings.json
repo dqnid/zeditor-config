@@ -7,8 +7,10 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
-    "icon_theme": "Zed (Default)",
+    "icon_theme": "Bearded Icon Theme",
+    "always_treat_brackets_as_autoclosed": false,
     "assistant": {
+        "enabled": true,
         "button": true,
         "dock": "right",
         "default_width": 640,
@@ -18,14 +20,21 @@
         "default_model": {
             "provider": "openai",
             "model": "gpt-4o"
-        },
+        }
     },
-    "always_treat_brackets_as_autoclosed": false,
+    "autosave": "off",
+    "autoscroll_on_clicks": true,
+    "auto_update": true,
     "base_keymap": "VSCode",
+    "centered_layout": {
+        "left_padding": 0.4,
+        "right_padding": 0.4
+    },
+    "restore_on_startup": "last_workspace",
     "tab_size": 4,
     "ui_font_size": 14,
     "ui_font_family": "JetBrainsMonoNL Nerd Font Mono",
-    "buffer_font_size": 14.0,
+    "buffer_font_size": 15.0,
     "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
     "buffer_font_weight": 400,
     "buffer_line_height": "comfortable",
@@ -40,19 +49,27 @@
         "button": "never"
     },
     "features": {
-        "inline_completion_provider": "none"
+        "edit_prediction_provider": "none"
     },
     "format_on_save": "on",
     "formatter": "language_server",
+    "ensure_final_newline_on_save": true,
     "enable_language_server": true,
+    "use_autoclose": true,
     "languages": {
+        "Astro": {
+            "tab_size": 2
+        },
         "HTML": {
             "tab_size": 2
         },
         "JSON": {
-            "tab_size": 4
+            "tab_size": 2
         },
         "JavaScript": {
+            "tab_size": 4,
+            "format_on_save": "language_server",
+            "preferred_line_length": 65,
             "formatter": {
                 "external": {
                     "command": "prettier",
@@ -61,9 +78,16 @@
                         "{buffer_path}"
                     ]
                 }
+            },
+            "code_actions_on_format": {
+                "source.organizeImports": true,
+                "source.fixAll.eslint": true
             }
         },
         "TypeScript": {
+            "tab_size": 4,
+            "format_on_save": "language_server",
+            "preferred_line_length": 65,
             "language_servers": [
                 "typescript-language-server",
                 "!vtsls"
@@ -78,10 +102,14 @@
                 }
             },
             "code_actions_on_format": {
-                "source.organizeImports": true
+                "source.organizeImports": true,
+                "source.fixAll.eslint": true
             }
         },
         "TSX": {
+            "tab_size": 2,
+            "format_on_save": "language_server",
+            "preferred_line_length": 85,
             "language_servers": [
                 "typescript-language-server",
                 "!vtsls"
@@ -96,22 +124,45 @@
                 }
             },
             "code_actions_on_format": {
-                "source.organizeImports": true
+                "source.organizeImports": true,
+                "source.fixAll.eslint": true
             }
         }
     },
     "file_types": {
+        "C++": [
+            "c"
+        ],
+        "TOML": [
+            "MyLockFile"
+        ],
         "Dockerfile": [
             "Dockerfile*"
         ]
     },
+    "file_scan_exclusions": [
+        "**/.git",
+        "**/.svn",
+        "**/.hg",
+        "**/.jj",
+        "**/CVS",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/.classpath",
+        "**/.settings"
+    ],
+    "file_scan_inclusions": [
+        ".env*"
+    ],
     "git": {
         "git_gutter": "tracked_files",
         "inline_blame": {
-            "enabled": true
+            "enabled": true,
+            "show_commit_summary": true
         }
     },
     "hard_tabs": false,
+    "hover_popover_enabled": true,
     "indent_guides": {
         "enabled": true,
         "line_width": 1,
@@ -128,6 +179,7 @@
         "edit_debounce_ms": 700,
         "scroll_debounce_ms": 50
     },
+    "modal_max_width": "medium",
     "outline_panel": {
         "button": true,
         "default_width": 240,
@@ -137,7 +189,13 @@
         "git_status": true,
         "indent_size": 20,
         "auto_reveal_entries": true,
-        "auto_fold_dirs": true
+        "auto_fold_dirs": true,
+        "indent_guides": {
+            "show": "never"
+        },
+        "scrollbar": {
+            "show": null
+        }
     },
     "preview_tabs": {
         "enabled": false,
@@ -148,13 +206,21 @@
         "button": true,
         "default_width": 240,
         "dock": "left",
+        "entry_spacing": "comfortable",
         "file_icons": true,
         "folder_icons": true,
         "git_status": true,
         "indent_size": 20,
         "auto_reveal_entries": true,
-        "auto_fold_dirs": true
+        "auto_fold_dirs": true,
+        "scrollbar": {
+            "show": null
+        },
+        "indent_guides": {
+            "show": "never"
+        }
     },
+    // "proxy": "http://127.0.0.1:10809",
     "relative_line_numbers": true,
     "search": {
         "whole_word": false,
@@ -162,7 +228,11 @@
         "include_ignored": false,
         "regex": true
     },
+    "selection_highlight": true,
     "show_wrap_guides": true,
+    "show_call_status_icon": true,
+    "show_completions_on_input": true,
+    "show_whitespaces": "selection",
     "wrap_guides": [
         80
     ],
@@ -171,18 +241,26 @@
         "cursors": true,
         "git_diff": true,
         "search_results": true,
+        "selected_text": true,
         "selected_symbol": true,
-        "diagnostics": true
+        "diagnostics": true,
+        "axes": {
+            "horizontal": false,
+            "vertical": true
+        },
     },
     "soft_wrap": "editor_width",
     "tab_bar": {
         "show": true,
-        "show_nav_history_buttons": false
+        "show_nav_history_buttons": false,
+        "show_tab_bar_buttons": true
     },
     "tabs": {
         "close_position": "right",
         "file_icons": true,
-        "git_status": true
+        "git_status": true,
+        "activate_on_close": "left_neighbour",
+        "always_show_close_button": false
     },
     "toolbar": {
         "breadcrumbs": true,
@@ -210,7 +288,7 @@
         },
         "env": {
             "ZED": "1",
-            "EXAMPLE": "value1:value2"
+            "EXAMPLE": "test:dqnid"
         },
         "font_family": null,
         "font_features": null,
@@ -220,15 +298,18 @@
         "button": true,
         "shell": "system",
         "toolbar": {
-            "title": true
+            "title": true,
+        },
+        "scrollbar": {
+            "show": "never"
         },
         "working_directory": "current_project_directory"
     },
     "theme": {
-        "mode": "light",
+        "mode": "dark",
         "light": "Solarized Light",
         "dark": "One Dark"
     },
-    "unnecessary_code_fade": 0.0,
+    "unnecessary_code_fade": 0.2,
     "vim_mode": true,
 }
