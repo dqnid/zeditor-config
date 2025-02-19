@@ -6,6 +6,9 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
+// TODO:
+// - Bindings to centered layout
+// - Binding to open remote projects
 {
     "icon_theme": "Bearded Icon Theme",
     "always_treat_brackets_as_autoclosed": false,
