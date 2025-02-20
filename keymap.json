@@ -1,85 +1,86 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-// To see the default key bindings run `zed: Open Default Keymap`
-// from the command palette.
-// NOTE: defaults on: https://github.com/zed-industries/zed/blob/main/assets/keymaps/default-macos.json
+// ╭───────────────────────────────╮
+// │- Zed editor keys              │
+// │- author: Daniel Heras Quesada │
+// ╰───────────────────────────────╯
 [
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
+    {
+        "context": "Workspace",
+        "bindings": {
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-l": "workspace::ActivatePaneRight",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-j": "workspace::ActivatePaneDown",
+            "cmd-shift-f": "file_finder::Toggle"
+        }
     },
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
-      "ctrl-t": "workspace::NewFile",
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-W": "pane::CloseAllItems",
-      "ctrl-n": "workspace::ToggleLeftDock",
-      "ctrl-m": "workspace::ToggleBottomDock"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": [
-      //   "workspace::SendKeystrokes",
-      //   "escape"
-      // ]
-    }
-  },
-  {
-    "context": "Editor && (showing_code_actions || showing_completions)",
-    "bindings": {
-      "up": "editor::ContextMenuPrev",
-      "ctrl-p": "editor::ContextMenuPrev",
-      "down": "editor::ContextMenuNext",
-      "ctrl-n": "editor::ContextMenuNext",
-      "pageup": "editor::ContextMenuFirst",
-      "pagedown": "editor::ContextMenuLast",
-      "tab": "editor::ContextMenuNext",
-      "shift-tab": "editor::ContextMenuPrev"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal",
-    "bindings": {
-      "space x": "pane::CloseActiveItem",
-      "space X": "pane::CloseAllItems",
-      "space b": "workspace::NewFile",
-      "space f f": "file_finder::Toggle",
-      "space space": "file_finder::Toggle",
-      "shift-tab": "pane::ActivatePrevItem",
-      "tab": "pane::ActivateNextItem",
-      "ctrl-h": "workspace::ActivatePaneLeft",
-      "ctrl-l": "workspace::ActivatePaneRight",
-      "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-n": "workspace::ToggleLeftDock",
-      "ctrl-t": "workspace::NewTerminal",
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-m": "workspace::ToggleBottomDock"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
-    "bindings": {
-      "space g g": [
-        "workspace::SendKeystrokes",
-        "alt-shift-t enter"
-      ]
-    }
-  }
+    {
+        "context": "Editor",
+        "bindings": {
+            // "j k": ["workspace::SendKeystrokes", "escape"]
+            "ctrl-t": "workspace::NewFile",
+            "ctrl-w": "pane::CloseActiveItem",
+            "ctrl-W": "pane::CloseAllItems",
+            "ctrl-n": "workspace::ToggleLeftDock",
+            "ctrl-x": "workspace::ToggleRightDock",
+            "ctrl-z": "workspace::ToggleBottomDock",
+            "ctrl-m": "workspace::ToggleCenteredLayout",
+            "ctrl-shift-l": "pane::SplitRight",
+            "ctrl-shift-j": "pane::SplitDown",
+            "ctrl-shift-h": "pane::SplitLeft",
+            "ctrl-shift-k": "pane::SplitUp"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            // "j k": [
+            //   "workspace::SendKeystrokes",
+            //   "escape"
+            // ]
+        }
+    },
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "ctrl-n": "workspace::ToggleLeftDock",
+        }
+    },
+    {
+        "context": "Editor && (showing_code_actions || showing_completions)",
+        "bindings": {
+            "up": "editor::ContextMenuPrev",
+            "ctrl-p": "editor::ContextMenuPrev",
+            "down": "editor::ContextMenuNext",
+            "ctrl-n": "editor::ContextMenuNext",
+            "pageup": "editor::ContextMenuFirst",
+            "pagedown": "editor::ContextMenuLast",
+            "tab": "editor::ContextMenuNext",
+            "shift-tab": "editor::ContextMenuPrev"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space x": "pane::CloseActiveItem",
+            "space X": "pane::CloseAllItems",
+            "space b": "workspace::NewFile",
+            "space f f": "file_finder::Toggle",
+            "space space": "file_finder::Toggle",
+            "shift-tab": "pane::ActivatePrevItem",
+            "tab": "pane::ActivateNextItem",
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-l": "workspace::ActivatePaneRight",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-j": "workspace::ActivatePaneDown"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-n": "workspace::ToggleLeftDock",
+            "ctrl-t": "workspace::NewTerminal",
+            "ctrl-w": "pane::CloseActiveItem",
+            "ctrl-z": "workspace::ToggleBottomDock"
+        }
+    },
 ]
