@@ -1,162 +1,47 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `zed: Open Default Settings` command
-// from the command palette
-// TODO:
-// - Bindings to centered layout
-// - Binding to open remote projects
+// ╭───────────────────────────────╮
+// │- Zed editor settings          │
+// │- author: Daniel Heras Quesada │
+// ╰───────────────────────────────╯
 {
-    "icon_theme": "Bearded Icon Theme",
-    "always_treat_brackets_as_autoclosed": false,
-    "assistant": {
-        "enabled": true,
-        "button": true,
-        "dock": "right",
-        "default_width": 640,
-        "default_height": 320,
-        "provider": "openai",
-        "version": "2",
-        "default_model": {
-            "provider": "openai",
-            "model": "gpt-4o"
-        }
-    },
-    "autosave": "off",
-    "autoscroll_on_clicks": true,
+    // ╭─────────╮
+    // │ General │
+    // ╰─────────╯
     "auto_update": true,
     "base_keymap": "VSCode",
-    "centered_layout": {
-        "left_padding": 0.4,
-        "right_padding": 0.4
-    },
     "restore_on_startup": "last_workspace",
-    "tab_size": 4,
+    // ╭─────────╮
+    // │ Styling │
+    // ╰─────────╯
+    "icon_theme": "Bearded Icon Theme",
+    "theme": {
+        "mode": "system",
+        "light": "Solarized Light",
+        "dark": "One Dark"
+    },
+    "unnecessary_code_fade": 0.2,
+    // ╭──────╮
+    // │ Font │
+    // ╰──────╯
     "ui_font_size": 14,
     "ui_font_family": "JetBrainsMonoNL Nerd Font Mono",
     "buffer_font_size": 15.0,
     "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
     "buffer_font_weight": 400,
     "buffer_line_height": "comfortable",
+    // ╭────────╮
+    // │ Editor │
+    // ╰────────╯
+    "always_treat_brackets_as_autoclosed": false,
+    "autosave": "off",
+    "autoscroll_on_clicks": true,
     "confirm_quit": false,
     "current_line_highlight": "all",
     "cursor_blink": true,
     "cursor_shape": "bar",
-    "collaboration_panel": {
-        "button": false
-    },
-    "chat_panel": {
-        "button": "never"
-    },
     "features": {
         "edit_prediction_provider": "none"
     },
-    "format_on_save": "on",
-    "formatter": "language_server",
-    "ensure_final_newline_on_save": true,
-    "enable_language_server": true,
-    "use_autoclose": true,
-    "languages": {
-        "Astro": {
-            "tab_size": 2
-        },
-        "HTML": {
-            "tab_size": 2
-        },
-        "JSON": {
-            "tab_size": 2
-        },
-        "JavaScript": {
-            "tab_size": 4,
-            "format_on_save": "language_server",
-            "preferred_line_length": 65,
-            "formatter": {
-                "external": {
-                    "command": "prettier",
-                    "arguments": [
-                        "--stdin-filepath",
-                        "{buffer_path}"
-                    ]
-                }
-            },
-            "code_actions_on_format": {
-                "source.organizeImports": true,
-                "source.fixAll.eslint": true
-            }
-        },
-        "TypeScript": {
-            "tab_size": 4,
-            "format_on_save": "language_server",
-            "preferred_line_length": 65,
-            "language_servers": [
-                "typescript-language-server",
-                "!vtsls"
-            ],
-            "formatter": {
-                "external": {
-                    "command": "prettier",
-                    "arguments": [
-                        "--stdin-filepath",
-                        "{buffer_path}"
-                    ]
-                }
-            },
-            "code_actions_on_format": {
-                "source.organizeImports": true,
-                "source.fixAll.eslint": true
-            }
-        },
-        "TSX": {
-            "tab_size": 2,
-            "format_on_save": "language_server",
-            "preferred_line_length": 85,
-            "language_servers": [
-                "typescript-language-server",
-                "!vtsls"
-            ],
-            "formatter": {
-                "external": {
-                    "command": "prettier",
-                    "arguments": [
-                        "--stdin-filepath",
-                        "{buffer_path}"
-                    ]
-                }
-            },
-            "code_actions_on_format": {
-                "source.organizeImports": true,
-                "source.fixAll.eslint": true
-            }
-        }
-    },
-    "file_types": {
-        "C++": [
-            "c"
-        ],
-        "TOML": [
-            "MyLockFile"
-        ],
-        "Dockerfile": [
-            "Dockerfile*"
-        ]
-    },
-    "file_scan_exclusions": [
-        "**/.git",
-        "**/.svn",
-        "**/.hg",
-        "**/.jj",
-        "**/CVS",
-        "**/.DS_Store",
-        "**/Thumbs.db",
-        "**/.classpath",
-        "**/.settings"
-    ],
-    "file_scan_inclusions": [
-        ".env*"
-    ],
+    "tab_size": 4, // May cause errors on colaborative projects wrongly configured
     "git": {
         "git_gutter": "tracked_files",
         "inline_blame": {
@@ -181,6 +66,56 @@
         "show_background": false,
         "edit_debounce_ms": 700,
         "scroll_debounce_ms": 50
+    },
+    "selection_highlight": true,
+    "show_wrap_guides": true,
+    "show_call_status_icon": true,
+    "show_completions_on_input": true,
+    "show_whitespaces": "selection",
+    "wrap_guides": [
+        80
+    ],
+    "relative_line_numbers": true,
+    "scrollbar": {
+        "show": "auto",
+        "cursors": true,
+        "git_diff": true,
+        "search_results": true,
+        "selected_text": true,
+        "selected_symbol": true,
+        "diagnostics": "all",
+        "axes": {
+            "horizontal": false,
+            "vertical": true
+        }
+    },
+    "vim_mode": true,
+    "soft_wrap": "editor_width",
+    // ╭────────╮
+    // │ Layout │
+    // ╰────────╯
+    "assistant": {
+        "enabled": true,
+        "button": true,
+        "dock": "right",
+        "default_width": 640,
+        "default_height": 320,
+        "provider": "openai",
+        "version": "2",
+        "default_model": {
+            "provider": "openai",
+            "model": "gpt-4o"
+        }
+    },
+    "centered_layout": {
+        "left_padding": 0.25,
+        "right_padding": 0.25
+    },
+    "collaboration_panel": {
+        "button": false
+    },
+    "chat_panel": {
+        "button": "never"
     },
     "modal_max_width": "medium",
     "outline_panel": {
@@ -224,35 +159,12 @@
         }
     },
     // "proxy": "http://127.0.0.1:10809",
-    "relative_line_numbers": true,
     "search": {
         "whole_word": false,
         "case_sensitive": false,
         "include_ignored": false,
         "regex": true
     },
-    "selection_highlight": true,
-    "show_wrap_guides": true,
-    "show_call_status_icon": true,
-    "show_completions_on_input": true,
-    "show_whitespaces": "selection",
-    "wrap_guides": [
-        80
-    ],
-    "scrollbar": {
-        "show": "auto",
-        "cursors": true,
-        "git_diff": true,
-        "search_results": true,
-        "selected_text": true,
-        "selected_symbol": true,
-        "diagnostics": true,
-        "axes": {
-            "horizontal": false,
-            "vertical": true
-        },
-    },
-    "soft_wrap": "editor_width",
     "tab_bar": {
         "show": true,
         "show_nav_history_buttons": false,
@@ -308,11 +220,104 @@
         },
         "working_directory": "current_project_directory"
     },
-    "theme": {
-        "mode": "dark",
-        "light": "Solarized Light",
-        "dark": "One Dark"
+    // ╭─────╮
+    // │ LSP │
+    // ╰─────╯
+    "format_on_save": "on",
+    "formatter": "language_server",
+    "ensure_final_newline_on_save": true,
+    "enable_language_server": true,
+    "use_autoclose": true,
+    "languages": {
+        "Astro": {
+            "tab_size": 2
+        },
+        "HTML": {
+            "tab_size": 2
+        },
+        "JSON": {
+            "tab_size": 4
+        },
+        "JavaScript": {
+            "format_on_save": "language_server",
+            "preferred_line_length": 65,
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}"
+                    ]
+                }
+            },
+            "code_actions_on_format": {
+                "source.organizeImports": true
+            }
+        },
+        "TypeScript": {
+            "format_on_save": "language_server",
+            "preferred_line_length": 65,
+            "language_servers": [
+                "typescript-language-server",
+                "!vtsls"
+            ],
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}"
+                    ]
+                }
+            },
+            "code_actions_on_format": {
+                "source.organizeImports": true
+            }
+        },
+        "TSX": {
+            "format_on_save": "language_server",
+            "preferred_line_length": 85,
+            "language_servers": [
+                "typescript-language-server",
+                "!vtsls"
+            ],
+            "formatter": {
+                "external": {
+                    "command": "prettier",
+                    "arguments": [
+                        "--stdin-filepath",
+                        "{buffer_path}"
+                    ]
+                }
+            },
+            "code_actions_on_format": {
+                "source.organizeImports": true
+            }
+        }
     },
-    "unnecessary_code_fade": 0.2,
-    "vim_mode": true,
+    "file_types": {
+        "C++": [
+            "c"
+        ],
+        "TOML": [
+            "MyLockFile"
+        ],
+        "Dockerfile": [
+            "Dockerfile*"
+        ]
+    },
+    "file_scan_exclusions": [
+        "**/.git",
+        "**/.svn",
+        "**/.hg",
+        "**/.jj",
+        "**/CVS",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/.classpath",
+        "**/.settings"
+    ],
+    "file_scan_inclusions": [
+        ".env*"
+    ]
 }
