@@ -41,7 +41,7 @@
     "features": {
         "edit_prediction_provider": "none"
     },
-    "tab_size": 4, // May cause errors on colaborative projects wrongly configured
+    // "tab_size": 4, // May cause errors on colaborative projects wrongly configured
     "git": {
         "git_gutter": "tracked_files",
         "inline_blame": {
@@ -203,7 +203,8 @@
         },
         "env": {
             "ZED": "1",
-            "EXAMPLE": "test:dqnid"
+            "EXAMPLE": "test:dqnid",
+            "BLUEPRINTS_PATHS": "./.blueprints"
         },
         "font_family": null,
         "font_features": null,
