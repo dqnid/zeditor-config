@@ -10,7 +10,9 @@
             "ctrl-l": "workspace::ActivatePaneRight",
             "ctrl-k": "workspace::ActivatePaneUp",
             "ctrl-j": "workspace::ActivatePaneDown",
-            "cmd-shift-f": "file_finder::Toggle"
+            "cmd-shift-f": "file_finder::Toggle",
+            "cmd-r": "task::Spawn",
+            "cmd-shift-r": "task::Rerun"
         }
     },
     {
@@ -42,7 +44,7 @@
     {
         "context": "ProjectPanel",
         "bindings": {
-            "ctrl-n": "workspace::ToggleLeftDock",
+            "ctrl-n": "workspace::ToggleLeftDock"
         }
     },
     {
@@ -82,5 +84,5 @@
             "ctrl-w": "pane::CloseActiveItem",
             "ctrl-z": "workspace::ToggleBottomDock"
         }
-    },
+    }
 ]
