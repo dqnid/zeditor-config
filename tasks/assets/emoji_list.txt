@@ -1,0 +1,24 @@
+:broom:                    │  🧹  │ clean, cleanup, remove
+:recycle:                  │  ♻️   │ recycle, actor
+:wrench :                  │  🔧  │ adjustment, rection, adapter
+:gear:                     │  ⚙️   │ adjustment
+:control_knobs:            │  🎛   │ config, adjustment
+:bug:                      │  🐛  │  bug
+:zap:                      │  ⚡️  │ speeded
+:bar_chart:                │  📊  │ analytics, chart
+:chart_with_upwards_trend: │  📈  │ analytics, chart, upwards
+:package:                  │  📦  │ package, wrap, ture
+:fire:                     │  🔥  │ fire, fix
+:sparkles:                 │  ✨  │ new, feature
+:nail_care:                │  💅  │ styles, prettify
+:art:                      │  🎨  │ styles, colors
+:lipstick:                 │  💄  │ styles, prettify
+:white_check_mark:         │  ✅  │ check, done
+:test_tube:                │  🧪  │ test, testing
+:pencil:                   │  📝  │ docs
+:warning:                  │  ⚠️   │ warning
+:no_entry_sign:            │  🚫  │ cancel
+:rotating_light:           │  🚨  │ alert, ect
+:mag_right:                │  🔎  │ search
+:old_key:                  │  🗝   │ dentials
+:rocket:                   │  🚀  │ shipping
