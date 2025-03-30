@@ -3,42 +3,51 @@
 // │- author: Daniel Heras Quesada │
 // ╰───────────────────────────────╯
 [
-  {
-    "label": "Example task",
-    "command": "for i in {1..5}; do echo \"Hello $i/5\"; sleep 1; done",
-    "env": {
-      "foo": "bar"
+    {
+        "label": "Example task",
+        "command": "for i in {1..5}; do echo \"Hello $i/5\"; sleep 1; done",
+        "env": {
+            "foo": "bar"
+        },
+        "use_new_terminal": false,
+        "allow_concurrent_runs": false,
+        "reveal": "always",
+        "hide": "never",
+        "shell": "system"
     },
-    "use_new_terminal": false,
-    "allow_concurrent_runs": false,
-    "reveal": "always",
-    "hide": "never",
-    "shell": "system"
-  },
-  {
-    "label": "Build migrate",
-    "command": "bash ~/.config/zed/tasks/build-migrate.sh",
-    "use_new_terminal": false,
-    "allow_concurrent_runs": false,
-    "reveal": "always",
-    "hide": "never",
-    "shell": "system"
-  },
-  {
-    "label": "Lazygit",
-    "command": "lazygit",
-    "args": [],
-    "env": {},
-    "use_new_terminal": true,
-    "allow_concurrent_runs": false,
-  },
-  {
-    "label": "Blueprints",
-    "command": "~/Packages/code-templates/code_templates",
-    "use_new_terminal": true,
-    "allow_concurrent_runs": false,
-    "reveal": "always",
-    "hide": "never",
-    "shell": "system"
-  }
+    {
+        "label": "Build migrate",
+        "command": "bash ~/.config/zed/tasks/build-migrate.sh",
+        "use_new_terminal": false,
+        "allow_concurrent_runs": false,
+        "reveal": "always",
+        "hide": "never",
+        "shell": "system"
+    },
+    {
+        "label": "Commit Stradi",
+        "command": "bash ~/.config/zed/tasks/commit-stradi.sh",
+        "use_new_terminal": false,
+        "allow_concurrent_runs": false,
+        "reveal": "always",
+        "hide": "always",
+        "shell": "system"
+    },
+    {
+        "label": "Lazygit",
+        "command": "lazygit",
+        "args": [],
+        "env": {},
+        "use_new_terminal": true,
+        "allow_concurrent_runs": false
+    },
+    {
+        "label": "Blueprints",
+        "command": "~/Packages/code-templates/code_templates",
+        "use_new_terminal": true,
+        "allow_concurrent_runs": false,
+        "reveal": "always",
+        "hide": "never",
+        "shell": "system"
+    }
 ]

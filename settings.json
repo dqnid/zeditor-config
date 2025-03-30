@@ -15,7 +15,7 @@
     "icon_theme": "Bearded Icon Theme",
     "theme": {
         "mode": "system",
-        "light": "Zed Legacy: Solarized Light",
+        "light": "Zed Legacy: Rosé Pine Dawn",
         "dark": "One Dark"
     },
     "unnecessary_code_fade": 0.2,
@@ -199,7 +199,7 @@
             "EXAMPLE": "test:dqnid",
             "BLUEPRINTS_PATHS": "./.blueprints"
         },
-        "font_family": null,
+        // "font_family": null,
         "font_features": null,
         "font_size": 14,
         "line_height": "comfortable",
