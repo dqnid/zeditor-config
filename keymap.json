@@ -44,20 +44,34 @@
     {
         "context": "ProjectPanel",
         "bindings": {
-            "ctrl-n": "workspace::ToggleLeftDock"
+            "ctrl-n": "workspace::ToggleLeftDock",
+            "f12": "project_panel::Rename",
+            "shift-enter": "project_panel::OpenWithSystem"
+        }
+    },
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "d": "project_panel::Delete",
+            "c": "project_panel::Copy",
+            "r": "project_panel::Rename",
+            "x": "project_panel::Cut",
+            "y": "workspace::CopyRelativePath",
+            "a": "project_panel::NewFile",
+            "A": "project_panel::NewDirectory"
         }
     },
     {
         "context": "Editor && (showing_code_actions || showing_completions)",
         "bindings": {
-            "up": "editor::ContextMenuPrev",
-            "ctrl-p": "editor::ContextMenuPrev",
+            "up": "editor::ContextMenuPrevious",
+            "ctrl-p": "editor::ContextMenuPrevious",
             "down": "editor::ContextMenuNext",
             "ctrl-n": "editor::ContextMenuNext",
             "pageup": "editor::ContextMenuFirst",
             "pagedown": "editor::ContextMenuLast",
             "tab": "editor::ContextMenuNext",
-            "shift-tab": "editor::ContextMenuPrev"
+            "shift-tab": "editor::ContextMenuPrevious"
         }
     },
     {
@@ -68,7 +82,7 @@
             "space b": "workspace::NewFile",
             "space f f": "file_finder::Toggle",
             "space space": "file_finder::Toggle",
-            "shift-tab": "pane::ActivatePrevItem",
+            "shift-tab": "pane::ActivatePreviousItem",
             "tab": "pane::ActivateNextItem",
             "ctrl-h": "workspace::ActivatePaneLeft",
             "ctrl-l": "workspace::ActivatePaneRight",
