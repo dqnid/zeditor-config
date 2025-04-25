@@ -1,6 +1,6 @@
 :broom:                    │  🧹  │ clean, cleanup, remove
 :recycle:                  │  ♻️   │ recycle, actor
-:wrench :                  │  🔧  │ adjustment, rection, adapter
+:wrench:                   │  🔧  │ adjustment, rection, adapter
 :gear:                     │  ⚙️   │ adjustment
 :control_knobs:            │  🎛   │ config, adjustment
 :bug:                      │  🐛  │  bug
@@ -22,3 +22,6 @@
 :mag_right:                │  🔎  │ search
 :old_key:                  │  🗝   │ dentials
 :rocket:                   │  🚀  │ shipping
+:stopwatch:                │  ⏱   │ speed, performance
+:wheelchair:               │  ♿️  │ accessibility, a11y
+:globe_with_meridians:     |  🌐  | intl, i18n, i10n, tradus, lang

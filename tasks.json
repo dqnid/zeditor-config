@@ -38,7 +38,7 @@
         "command": "lazygit",
         "args": [],
         "env": {},
-        "use_new_terminal": true,
+        "use_new_terminal": false,
         "allow_concurrent_runs": false
     },
     {

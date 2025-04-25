@@ -173,7 +173,7 @@
         "file_icons": true,
         "git_status": true,
         "activate_on_close": "left_neighbour",
-        "always_show_close_button": false
+        "show_close_button": "hover"
     },
     "toolbar": {
         "breadcrumbs": true,
