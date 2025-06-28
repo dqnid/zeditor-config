@@ -51,6 +51,7 @@
     },
     "hard_tabs": false,
     "hover_popover_enabled": true,
+    "hover_popover_delay": 0,
     "indent_guides": {
         "enabled": true,
         "line_width": 1,
@@ -92,7 +93,7 @@
     // ╭────────╮
     // │ Layout │
     // ╰────────╯
-    "assistant": {
+    "agent": {
         "enabled": true,
         "button": true,
         "dock": "right",
@@ -114,6 +115,27 @@
     },
     "chat_panel": {
         "button": "never"
+    },
+    "diagnostics": {
+        "button": true,
+        "include_warnings": true,
+        "inline": {
+            "enabled": true,
+            "update_debounce_ms": 150,
+            "padding": 4,
+            "min_column": 0,
+            "max_severity": null
+        },
+        "cargo": null
+    },
+    "title_bar": {
+        "show_branch_icon": true,
+        "show_project_items": true,
+        "show_user_picture": true,
+        "show_branch_name": true
+    },
+    "minimap": {
+        "show": "never"
     },
     "modal_max_width": "medium",
     "outline_panel": {
@@ -161,6 +183,7 @@
         "whole_word": false,
         "case_sensitive": false,
         "include_ignored": false,
+        "button": true,
         "regex": true
     },
     "tab_bar": {

@@ -10,20 +10,31 @@
             "ctrl-l": "workspace::ActivatePaneRight",
             "ctrl-k": "workspace::ActivatePaneUp",
             "ctrl-j": "workspace::ActivatePaneDown",
-            "cmd-shift-f": "file_finder::Toggle",
-            "cmd-r": "task::Spawn",
-            "cmd-shift-r": "task::Rerun"
+            "ctrl-shift-f": "file_finder::Toggle",
+            "ctrl-x": "task::Spawn",
+            "ctrl-shift-x": "task::Rerun",
+            "ctrl-p": "projects::OpenRecent"
         }
     },
     {
         "context": "Editor",
         "bindings": {
-            // "j k": ["workspace::SendKeystrokes", "escape"]
+            // "j k": ["workspace::SendKeystrokes", "escape"],
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-l": "workspace::ActivatePaneRight",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-j": "workspace::ActivatePaneDown",
+
             "ctrl-t": "workspace::NewFile",
             "ctrl-w": "pane::CloseActiveItem",
             "ctrl-W": "pane::CloseAllItems",
-            "ctrl-n": "workspace::ToggleLeftDock",
-            "ctrl-x": "workspace::ToggleRightDock",
+
+            "ctrl-n": "project_panel::ToggleFocus",
+            "ctrl-a": "outline_panel::ToggleFocus",
+            "ctrl-g": "git_panel::ToggleFocus",
+
+            "ctrl-p": "projects::OpenRecent",
+            "ctrl-x": "task::Spawn",
             "ctrl-z": "workspace::ToggleBottomDock",
             "ctrl-m": "workspace::ToggleCenteredLayout",
             "ctrl-shift-l": "pane::SplitRight",
@@ -46,7 +57,14 @@
         "bindings": {
             "ctrl-n": "workspace::ToggleLeftDock",
             "f12": "project_panel::Rename",
-            "shift-enter": "project_panel::OpenWithSystem"
+            "shift-enter": "project_panel::OpenWithSystem",
+            "/": "project_panel::NewSearchInDirectory"
+        }
+    },
+    {
+        "context": "GitPanel",
+        "bindings": {
+            "ctrl-g": "workspace::ToggleLeftDock"
         }
     },
     {
@@ -77,17 +95,17 @@
     {
         "context": "Editor && vim_mode == normal",
         "bindings": {
-            "space x": "pane::CloseActiveItem",
-            "space X": "pane::CloseAllItems",
-            "space b": "workspace::NewFile",
-            "space f f": "file_finder::Toggle",
-            "space space": "file_finder::Toggle",
             "shift-tab": "pane::ActivatePreviousItem",
             "tab": "pane::ActivateNextItem",
-            "ctrl-h": "workspace::ActivatePaneLeft",
-            "ctrl-l": "workspace::ActivatePaneRight",
-            "ctrl-k": "workspace::ActivatePaneUp",
-            "ctrl-j": "workspace::ActivatePaneDown"
+
+            "space a": "outline::Toggle",
+            "space r": "editor::Rename",
+            "space x": "pane::CloseActiveItem",
+            "space X": "pane::CloseAllItems",
+            "space g": "git_panel::ToggleFocus",
+            "space f a": "pane::DeploySearch",
+            "space f w": "project_symbols::Toggle",
+            "space space": "file_finder::Toggle"
         }
     },
     {
