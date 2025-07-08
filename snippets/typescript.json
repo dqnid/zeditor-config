@@ -1,0 +1,20 @@
+{
+    "Log to console": {
+        "prefix": "console log",
+        "body": ["console.info(\"__${1:Place}\", {${2:Value}})", "$0"],
+        "description": "Logs to console"
+    },
+    "Defines a function": {
+        "prefix": "function",
+        "body": ["function ${1:Name}(${2:args}) {\n\t${3}\n}", "$0"],
+        "description": "Defines a function"
+    },
+    "Defienes a JSX component": {
+        "prefix": "jsx component",
+        "body": [
+            "export function ${1:Name}(${2:args}): React.FC<${3}> {\n\t${4}\n}",
+            "$0"
+        ],
+        "description": "Defines a JSX component"
+    }
+}
