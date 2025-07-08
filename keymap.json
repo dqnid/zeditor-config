@@ -1,7 +1,7 @@
-// ╭───────────────────────────────╮
-// │- Zed editor keys              │
-// │- author: Daniel Heras Quesada │
-// ╰───────────────────────────────╯
+// ╭────────────────────────────────╮
+// │- Zed editor keys              -│
+// │- author: Daniel Heras Quesada -│
+// ╰────────────────────────────────╯
 [
     {
         "context": "Workspace",
@@ -53,9 +53,19 @@
         }
     },
     {
+        "context": "OutlinePanel",
+        "bindings": {
+            "ctrl-a": "workspace::ToggleLeftDock",
+            "ctrl-n": "project_panel::ToggleFocus",
+            "ctrl-g": "git_panel::ToggleFocus"
+        }
+    },
+    {
         "context": "ProjectPanel",
         "bindings": {
             "ctrl-n": "workspace::ToggleLeftDock",
+            "ctrl-a": "outline_panel::ToggleFocus",
+            "ctrl-g": "git_panel::ToggleFocus",
             "f12": "project_panel::Rename",
             "shift-enter": "project_panel::OpenWithSystem",
             "/": "project_panel::NewSearchInDirectory"
@@ -64,7 +74,9 @@
     {
         "context": "GitPanel",
         "bindings": {
-            "ctrl-g": "workspace::ToggleLeftDock"
+            "ctrl-g": "workspace::ToggleLeftDock",
+            "ctrl-a": "outline_panel::ToggleFocus",
+            "ctrl-n": "project_panel::ToggleFocus"
         }
     },
     {

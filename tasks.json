@@ -1,7 +1,7 @@
-// ╭───────────────────────────────╮
-// │- Zed editor tasks             │
-// │- author: Daniel Heras Quesada │
-// ╰───────────────────────────────╯
+// ╭────────────────────────────────╮
+// │- Zed editor tasks             -│
+// │- author: Daniel Heras Quesada -│
+// ╰────────────────────────────────╯
 [
     {
         "label": "🚀 Build migrate",
@@ -13,7 +13,7 @@
         "shell": "system"
     },
     {
-        "label": ":octocat: Commit Stradi",
+        "label": "👚 Commit Stradi",
         "command": "bash ~/.config/zed/tasks/commit-stradi.sh",
         "use_new_terminal": false,
         "allow_concurrent_runs": false,
@@ -22,15 +22,13 @@
         "shell": "system"
     },
     {
-        "label": "Lazygit",
+        "label": "😴 Lazygit",
         "command": "lazygit",
-        "args": [],
-        "env": {},
         "use_new_terminal": false,
         "allow_concurrent_runs": false
     },
     {
-        "label": "Blueprints",
+        "label": "🐾 Blueprints",
         "command": "~/Packages/code-templates/code_templates",
         "use_new_terminal": true,
         "allow_concurrent_runs": false,
@@ -38,4 +36,13 @@
         "hide": "never",
         "shell": "system"
     }
+    // {
+    //     "label": "📝 Preview document",
+    //     "command": "bash ~/.config/zed/tasks/preview-doc.sh '$ZED_FILE'",
+    //     "use_new_terminal": true,
+    //     "allow_concurrent_runs": false,
+    //     "reveal": "always",
+    //     "hide": "never",
+    //     "shell": "system"
+    // }
 ]
