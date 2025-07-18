@@ -3,5 +3,13 @@
         "prefix": "console",
         "body": ["console.info(\"__${1:Place}!\")", "$0"],
         "description": "Logs to console"
+    },
+    "Create Docstring": {
+        "prefix": "docstring jsdoc",
+        "body": [
+            "/**\n* ${1:Description}\n* @param {${2:Type}} ${3:Name}\n* @returns {${4:Type}} ${5:Name}\n*/",
+            "$0"
+        ],
+        "description": "Creates a new JSDoc string"
     }
 }

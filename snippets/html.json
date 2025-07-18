@@ -1,0 +1,10 @@
+{
+    "Print base": {
+        "prefix": "!html5",
+        "body": [
+            "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title></title>\n\t\t<link href=\"style.css\" rel=\"stylesheet\" />\n\t</head>\n\t<body>\n\t\t<main></main>\n\t\t<script>\n\t\t</script>\n\t</body>\n</html>\n",
+            "$0"
+        ],
+        "description": "Creates an html5 template"
+    }
+}
