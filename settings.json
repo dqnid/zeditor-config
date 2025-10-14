@@ -94,20 +94,19 @@
     // │ Layout │
     // ╰────────╯
     "agent": {
-        "enabled": true,
-        "button": true,
+        "enabled": false,
+        "button": false,
         "dock": "right",
         "default_width": 640,
         "default_height": 320,
-        "version": "2",
         "default_model": {
             "provider": "openai",
-            "model": "gpt-4o"
+            "model": "gpt-4-turbo"
         }
     },
     "centered_layout": {
-        "left_padding": 0.22,
-        "right_padding": 0.22
+        "left_padding": 0.2,
+        "right_padding": 0.2
     },
     "collaboration_panel": {
         "button": false
@@ -139,7 +138,6 @@
         "thumb_border": "left_open",
         "current_line_highlight": "all"
     },
-    "modal_max_width": "medium",
     "outline_panel": {
         "button": true,
         "default_width": 240,
