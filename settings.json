@@ -6,6 +6,9 @@
     // ╭─────────╮
     // │ General │
     // ╰─────────╯
+    "auto_update_extensions": {
+        "flat-theme": false
+    },
     "auto_update": true,
     "base_keymap": "VSCode",
     "restore_on_startup": "last_session",
@@ -13,11 +16,7 @@
     // │ Styling │
     // ╰─────────╯
     "icon_theme": "Bearded Icon Theme",
-    "theme": {
-        "mode": "system",
-        "light": "Zed Legacy: Rosé Pine Dawn",
-        "dark": "One Dark"
-    },
+    "theme": "Repose dark",
     "unnecessary_code_fade": 0.2,
     // ╭──────╮
     // │ Font │
@@ -256,7 +255,8 @@
             "tab_size": 4
         },
         "JavaScript": {
-            "format_on_save": "prettier",
+            "formatter": "prettier",
+            "format_on_save": "on",
             "tab_size": 2,
             "preferred_line_length": 65,
             "code_actions_on_format": {
@@ -264,7 +264,8 @@
             }
         },
         "TypeScript": {
-            "format_on_save": "prettier",
+            "formatter": "prettier",
+            "format_on_save": "on",
             "preferred_line_length": 65,
             "language_servers": ["typescript-language-server", "!vtsls"],
             "code_actions_on_format": {
@@ -272,7 +273,8 @@
             }
         },
         "TSX": {
-            "format_on_save": "prettier",
+            "formatter": "prettier",
+            "format_on_save": "on",
             "preferred_line_length": 85,
             "language_servers": ["typescript-language-server", "!vtsls"],
             // "formatter": {
